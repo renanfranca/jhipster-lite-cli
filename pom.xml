@@ -60,6 +60,11 @@
       <classifier>tests</classifier>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>com.github.lukfor</groupId>
+      <artifactId>magic-progress</artifactId>
+      <version>${magic-progress.version}</version>
+    </dependency>
   </dependencies>
 
   <properties>
@@ -81,6 +86,7 @@
     <picocli-spring-boot-starter.version>4.7.7</picocli-spring-boot-starter.version>
     <spring-boot.version>3.4.4</spring-boot.version>
     <jhlite.version>1.31.0</jhlite.version>
+    <magic-progress.version>0.3.2</magic-progress.version>
   </properties>
 
   <build>
