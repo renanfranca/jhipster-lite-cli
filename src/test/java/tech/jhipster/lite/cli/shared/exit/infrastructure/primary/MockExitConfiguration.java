@@ -9,6 +9,7 @@ import tech.jhipster.lite.cli.shared.exit.domain.SpringApplicationExit;
 import tech.jhipster.lite.cli.shared.exit.domain.SystemExit;
 
 //TODO Understand why does not working with @TestConfiguration - Use
+//@TestConfiguration
 @Configuration
 public class MockExitConfiguration {
 
