@@ -3,11 +3,14 @@ package tech.jhipster.lite.cli;
 import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.WebApplicationType;
+import org.springframework.boot.actuate.autoconfigure.wavefront.WavefrontProperties.Application;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.event.ApplicationStartedEvent;
 import org.springframework.context.ConfigurableApplicationContext;
 import tech.jhipster.lite.JHLiteApp;
+import tech.jhipster.lite.cli.shared.exit.domain.SpringApplicationExit;
+import tech.jhipster.lite.cli.shared.exit.domain.SystemExit;
 import tech.jhipster.lite.cli.shared.generation.domain.ExcludeFromGeneratedCodeCoverage;
 import tech.jhipster.lite.cli.shared.spinnerprogress.domain.SpinnerProgress;
 import tech.jhipster.lite.cli.shared.spinnerprogress.infrastructure.primary.SpinnerProgressProvider;
@@ -27,8 +30,12 @@ public class JHLiteCliApp {
       .listeners(event -> handleApplicationEvent(event, spinnerProgress))
       .run(args);
 
-    int exitCode = SpringApplication.exit(context);
-    System.exit(exitCode);
+    SystemExit systemExit = context.getBean(SystemExit.class);
+    SpringApplicationExit springApplicationExit = context.getBean(SpringApplicationExit.class);
+
+    int exitCode = springApplicationExit.exit(context);
+
+    systemExit.exit(exitCode);
   }
 
   private static void handleApplicationEvent(Object event, SpinnerProgress spinnerProgress) {

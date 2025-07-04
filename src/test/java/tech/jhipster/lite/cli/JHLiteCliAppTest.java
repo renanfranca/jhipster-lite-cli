@@ -11,10 +11,13 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
-@IntegrationTest
+@DisplayNameGeneration(ReplaceCamelCase.class)
+@SpringBootTest(classes = { JHLiteCliApp.class })
 class JHLiteCliAppTest {
 
   private static final String LOADING_COMPLETE_MESSAGE = "JHipster Lite CLI is ready";

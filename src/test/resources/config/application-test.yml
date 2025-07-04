@@ -2,4 +2,5 @@ logging:
   config: classpath:logback.xml
 spring:
   main:
+    allow-bean-definition-overriding: true
     banner-mode: 'off'
