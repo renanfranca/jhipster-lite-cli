@@ -10,7 +10,6 @@ import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import tech.jhipster.lite.cli.shared.exit.infrastructure.primary.MockExitConfiguration;
 
 @DisplayNameGeneration(ReplaceCamelCase.class)
 @SpringBootTest(classes = { JHLiteCliApp.class })
