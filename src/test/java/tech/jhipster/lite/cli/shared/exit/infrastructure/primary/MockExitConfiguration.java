@@ -8,19 +8,19 @@ import org.springframework.context.annotation.Primary;
 import tech.jhipster.lite.cli.shared.exit.domain.SpringApplicationExit;
 import tech.jhipster.lite.cli.shared.exit.domain.SystemExit;
 
-//TODO Understand why does not working with @TestConfiguration
+//TODO Understand why does not working with @TestConfiguration - Use
 @Configuration
 public class MockExitConfiguration {
 
   @Bean
   @Primary
-  SystemExit SystemExit() {
+  SystemExit systemExit() {
     return mock(SystemExit.class);
   }
 
   @Bean
   @Primary
-  SpringApplicationExit SpringApplicationExit() {
+  SpringApplicationExit springApplicationExit() {
     return mock(SpringApplicationExit.class);
   }
 }
