@@ -1,12 +1,11 @@
 package tech.jhipster.lite.cli.shared.exit.infrastructure.primary;
 
-import org.springframework.context.annotation.Primary;
-import org.springframework.stereotype.Component;
 import tech.jhipster.lite.cli.shared.exit.domain.SystemExit;
 
-@Component
-@Primary
-public class FakedSystemExit implements SystemExit {
+//@Component
+//@Primary
+//TODO DELETE IT
+class FakedSystemExit implements SystemExit {
 
   private int lastExitCode = 0;
 
