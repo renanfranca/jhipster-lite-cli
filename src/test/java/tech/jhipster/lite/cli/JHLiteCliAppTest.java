@@ -74,7 +74,7 @@ class JHLiteCliAppTest {
     }
 
     @Test
-    void shouldShowMessagesInCorrectOrderWhenRunningApplyInitCommandWithoutParameters() throws Exception {
+    void shouldShowMessagesInCorrectOrderWhenRunningApplyInitCommandWithoutParameters() {
       ByteArrayOutputStream outContent = new ByteArrayOutputStream();
       System.setOut(new PrintStream(outContent));
       System.setErr(new PrintStream(outContent));
@@ -99,7 +99,7 @@ class JHLiteCliAppTest {
     }
 
     @Test
-    void shouldShowMessagesInCorrectOrderWhenRunningApplyInitCommandWithRequiredParameters() throws Exception {
+    void shouldShowMessagesInCorrectOrderWhenRunningApplyInitCommandWithRequiredParameters() {
       ByteArrayOutputStream outContent = new ByteArrayOutputStream();
       System.setOut(new PrintStream(outContent));
       System.setErr(new PrintStream(outContent));
